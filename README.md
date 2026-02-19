@@ -48,6 +48,12 @@ findex-malawi-analysis/
 │   ├── 02_descriptive_analysis.ipynb
 │   ├── 03_barriers_analysis.ipynb
 │   └── 04_from_barriers_to_policy.ipynb
+├── dashboard/              ← ✨ NEW: Interactive web dashboard
+│   ├── app.py
+│   ├── utils.py
+│   ├── assets/
+│   │   └── style.css
+│   └── README.md
 └── outputs/
     ├── figures/   ← saved plots (PNG, 200 dpi)
     └── tables/    ← exported CSVs
@@ -98,6 +104,28 @@ pip install -r requirements.txt
 ```
 
 Place the raw data file in `data/raw/` and run notebooks in order: 01 → 04.
+
+### 🚀 Interactive Dashboard
+
+Launch the high-end interactive web dashboard:
+
+```bash
+# Option 1: Use the launcher script
+python launch_dashboard.py
+
+# Option 2: Direct launch
+cd dashboard
+python app.py
+```
+
+Then open your browser to **http://127.0.0.1:8050/**
+
+**Dashboard Features:**
+- 📊 Five interactive tabs: Overview, Demographics, Barriers, Policy, Models
+- 📈 Dynamic Plotly visualizations
+- 💡 Real-time KPI cards
+- 📱 Fully responsive design
+- 🎨 Professional UI with Bootstrap theme
 
 ### Data
 
