@@ -1,0 +1,158 @@
+# ============================================================================
+# Financial Inclusion Malawi - Git Ignore Rules
+# ============================================================================
+
+# Python
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+# ----------------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# IPython
+# ----------------------------------------------------------------------------
+profile_default/
+ipython_config.py
+
+# Data Files (excluding raw source data)
+# ----------------------------------------------------------------------------
+# Uncomment if data is sensitive or too large:
+# data/raw/*.csv
+# data/raw/*.xlsx
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.pkl
+*.db
+*.sqlite
+
+# Large Output Files
+# ----------------------------------------------------------------------------
+outputs/figures/*.pdf
+outputs/figures/*.png
+outputs/figures/*.jpg
+outputs/tables/*.csv
+outputs/tables/*.xlsx
+# Keep example outputs:
+!outputs/figures/example_*.png
+!outputs/tables/example_*.csv
+
+# OS-Specific
+# ----------------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# IDE/Editor
+# ----------------------------------------------------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+!*.code-workspace  # Keep if sharing workspace settings
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Lab
+.jupyter/
+.local/
+
+# Logs and Temporary Files
+# ----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# Documentation Build
+# ----------------------------------------------------------------------------
+docs/_build/
+site/
+
+# Testing
+# ----------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Environment Variables
+# ----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# Backup Files
+# ----------------------------------------------------------------------------
+*.bak
+*.backup
+*_backup.*
+*_old.*
+
+# Compressed Files
+# ----------------------------------------------------------------------------
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Sensitive Information
+# ----------------------------------------------------------------------------
+secrets.py
+credentials.json
+api_keys.txt
+
+# Project-Specific
+# ----------------------------------------------------------------------------
+# Uncomment if you don't want to track certain outputs:
+# outputs/drafts/
+# notebooks/experiments/
+# notebooks/*_test.ipynb

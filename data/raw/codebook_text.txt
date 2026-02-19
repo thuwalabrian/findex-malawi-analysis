@@ -1,0 +1,2364 @@
+=== PAGE 1 ===
+ 
+Official Use Only 
+Global Findex 2025  
+ 
+Microdata Codebook 
+ 
+The Global Findex 2025 individual-level data is available in the World Bank Microdata Library, here. 
+The complete questionnaire is available here. 
+“Don’t know” and “Refused to answer” are coded as ‘no’ in the Global Findex 2025 country-level 
+database, here.  
+  
+ 
+ 
+
+=== PAGE 2 ===
+ 
+Official Use Only 
+Global Findex 2025 Microdata Codebook 
+ 
+Variable names and definitions are listed below: 
+Variable name 
+Label 
+Definition 
+ 
+Demographic and Income Information 
+ 
+economy 
+Economy 
+Name of the economy 
+economycode 
+Economy code 
+International Standards Organization (ISO) 3-digit alphabetic code for each 
+economy 
+regionwb 
+Regional code 
+World Bank regional classifications (2024)East Asia & Pacific (excluding high 
+income) 
+Europe & Central Asia (excluding high income) 
+High income 
+Latin America & Caribbean (excluding high income) 
+Middle East & North Africa (excluding high income) 
+South Asia 
+Sub-Saharan Africa (excluding high income) 
+ 
+Note: High income based on GNI per capita data from 2024.  
+See more here 
+pop_adult 
+Population 15+, 2023, 
+WDI 
+Adult (15+) population using 2023 World Development Indicators (WDI) 
+wpid_random 
+Gallup World Poll 
+identifier 
+Individual-level identifier to merge with Gallup World Poll data 
+wgt 
+Weight 
+Weight assigned to each observation 
+female 
+Respondent is female 
+= 1 if the respondent is female 
+= 2 if the respondent is male  
+age 
+Respondent age 
+Respondent’s age (in years) 
+educ 
+Respondent education 
+level 
+= 1 if the respondent has completed primary school or less 
+= 2 if the respondent has completed secondary school 
+= 3 if the respondent has completed tertiary education or more 
+inc_q 
+Within-economy 
+household income 
+quintile 
+Respondent’s within-economy household income quintile (1 to 5) 
+
+=== PAGE 3 ===
+ 
+Official Use Only 
+emp_in 
+Respondent is in 
+workforce 
+= 1 if the respondent is in the workforce 
+= 2 if the respondent is out of the workforce  
+urbanicity 
+Respondent lives in 
+rural area 
+= 1 if the respondent lives in a rural area  
+= 2 if and the respondent lives in an urban area 
+ 
+Note: Rural and urban classifications rely on a joint OECD-EU effort to 
+classify these two groups based on population grids (not administrative 
+units) that directly capture the spatial concentration of people.  
+See more here. 
+ 
+Global Findex Constructed Variables 
+Using responses from multiple questionnaire variables 
+ 
+account_fin 
+Has an account at a 
+financial institution 
+= 1 if the respondent had an account at a bank or at another type of 
+financial institution, such as a credit union, a microfinance institution, a 
+cooperative, or the post office (if applicable), or has a debit card 
+= 0 if the respondent did not have an account 
+ 
+Note: The data also includes an additional 2 percent of respondents in 2024 
+who reported receiving wages, government transfers, a public sector 
+pension, or payments for agricultural products into an account (excluding 
+mobile money) in the past year; or paying utility bills from a financial 
+institution account in the past year; or receiving wages, government 
+transfers, or agricultural payments to a card in the past year. The definition 
+does not include non-bank financial institutions such as pension funds, 
+retirement accounts, insurance companies, or equity holdings such as 
+stocks.  Questions screened for account ownership in the questionnaire do 
+not include these additional 2 percent of respondents. 
+account_mob 
+Has a mobile money 
+account 
+= 1 if the respondent used mobile money services to pay bills or to send or 
+receive money in the past year  
+= 0 if the respondent did not use them 
+ 
+Note: Mobile money service providers are those included in the GSM 
+Association’s Mobile Money for the Unbanked (GSMA MMU) database. The 
+data also includes an additional 2 percent of respondents in 2024 who 
+received wages, government transfers, a public sector pension, or payments 
+for agricultural products through a mobile phone in the past year. Unlike the 
+definition of account at a financial institution, the definition of mobile 
+money account does not include the payment of utility bills through a 
+mobile phone. The reason is that the phrasing of the possible answers 
+leaves it open as to whether those payments were made using a mobile 
+money account or an over-the-counter service. Questions screened for 
+account ownership in the questionnaire do not include these additional 2 
+percent of respondents. 
+account 
+Has an account 
+= 1 if the respondent has an account at a financial institution, a mobile 
+money account, or both  
+= 0 if the respondent does not have an account 
+
+=== PAGE 4 ===
+ 
+Official Use Only 
+dig_account 
+Has a digitally enabled 
+account 
+=1 if the respondent has a mobile money account or an account at a bank or 
+similar financial institution that they make digital payments from using a 
+card or phone 
+=0 if the respondent does not have a mobile money account or an account 
+at a bank or similar financial institution that they make digital payments 
+from using a card or phone 
+ 
+borrowed 
+Borrowed  
+= 1 if the respondent, personally or together with someone else, borrowed 
+money in the past year, including from a bank or similar financial institution, 
+via a mobile money account, from family or friends, or from an informal 
+savings group, or for any other reason  
+= 0 if the respondent did not borrow 
+saved 
+Saved 
+= 1 if the respondent personally saved or set aside money in the past year, 
+including using an account at a financial institution, via a mobile money 
+account, a savings club or person outside the family, for any reason 
+= 0 if the respondent did not save 
+receive_wages 
+Received a wage 
+payment  
+= 1 if the respondent received a wage payment into an account in the past 
+year 
+= 2 if the respondent received a wage payment in cash only in the past year 
+= 3 if the respondent received a wage payment via some other method in 
+the past year 
+= 4 if the respondent did not receive a wage payment in the past year 
+= 5 if the respondent does not know/refuses to answer 
+receive_transfers 
+Received a 
+government transfer 
+payment  
+= 1 if the respondent received government transfers into an account in the 
+past year 
+= 2 if the respondent received government transfers in cash only in the past 
+year 
+= 3 if the respondent received government transfers via some other method 
+in the past year 
+= 4 if the respondent did not receive government transfers in the past year 
+= 5 if the respondent does not know/refuses to answer 
+receive_pensions 
+Received a 
+government pension 
+payment  
+= 1 if the respondent received pension from the government into an 
+account in the past year 
+= 2 if the respondent received pension from the government in cash only in 
+the past year 
+= 3 if the respondent received pension from the government via some other 
+method in the past year 
+= 4 if the respondent did not receive pension from the government in the 
+past year 
+= 5 if the respondent does not know/refuses to answer 
+receive_agricultur
+e 
+Received a payment 
+for the sale of 
+agricultural goods  
+= 1 if the respondent received payment from the sale of agricultural 
+products into an account in the past year 
+= 2 if the respondent received payment from the sale of agricultural 
+products in cash only in the past year 
+= 3 if the respondent received payment from the sale of agricultural 
+products via some other method in the past year 
+
+=== PAGE 5 ===
+ 
+Official Use Only 
+= 4 if the respondent did not receive payment from the sale of agricultural 
+products in the past year 
+= 5 if the respondent does not know/refuses to answer 
+merchantpay_dig 
+Made a digital 
+merchant payment 
+=1 if respondent used a card, or a mobile phone, to make a purchase in-
+store or to pay online for an internet purchase in the past year 
+=0 if respondent did not make a digital merchant payment 
+pay_utilities 
+Paid a utility bill  
+= 1 if the respondent made a utility payment from an account in the past 
+year 
+= 2 if the respondent made a utility payment in cash only in the past year 
+= 3 if the respondent made a utility payment via some other method in the 
+past year 
+= 4 if the respondent did not make a utility payment in the past year 
+= 5 if the respondent does not know/refuses to answer 
+domestic_remitta
+nces 
+Made or received a 
+domestic remittance 
+payment 
+= 1 if the respondent sent or received domestic remittances via an account 
+in the past year 
+= 2 if the respondent sent or received domestic remittances via other 
+methods in the past year  
+= 3 if the respondent did not send or receive domestic remittances in the 
+past year 
+= 4 if the respondent does not know/refuses to answer 
+anydigpayment 
+Made or received a 
+digital payment 
+= 1 if respondent used mobile money, a card, or a mobile phone to make a 
+payment from an account, or used the internet to pay bills or to buy 
+something online or in a store, or paid bills or sent or received remittances 
+directly from or into a financial institution account or through a mobile 
+money account in the past year. It also includes respondents who received 
+payments for agricultural products, government transfers, wages, or a public 
+sector pension into a financial institution account or through a mobile 
+money account in the past year.  
+= 0 if the respondent did not make or receive a digital payment 
+ 
+Global Findex Questionnaire Variables 
+ 
+fin2 
+Has a debit card 
+=1 if the respondent has an ATM/debit card 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+fin3 
+Used a card or mobile 
+phone to access 
+account 
+= 1 if the respondent has used a card or mobile phone to make payments, 
+buy things, or to send or receive money from or to their financial institution 
+account (excluding mobile money) in the past year 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+
+=== PAGE 6 ===
+ 
+Official Use Only 
+fin4 
+Opened first account 
+to receive a wage or 
+salary payment or 
+money from the 
+government 
+= 1 if the respondent opened their first account at a financial institution 
+(excluding mobile money) to receive a wage or salary payment or money 
+from the government 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money) 
+fin5 
+Frequency of money 
+deposited into 
+accounts 
+= 1 if money is deposited into the respondent’s account(s) weekly 
+=2 if money is deposited into the respondent’s account(s) monthly 
+=3 if money is deposited into the respondent’s account less than once a 
+month 
+=4 if money is never deposited into the respondent’s account  
+=5 if don’t know 
+=6 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+fin6 
+Frequency of money 
+sent or taken out of 
+accounts 
+ 
+= 1 if money is deposited into the respondent’s account weekly 
+=2 if money is deposited into the respondent’s account monthly 
+=3 if money is deposited into the respondent’s account less than once a 
+month 
+=4 if money is never deposited into the respondent’s account  
+=5 if don’t know 
+=6 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+fin7 
+Any deposits or 
+withdrawals 
+=1 if any money was put into or taken out of respondent’s account(s) 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts) 
+who report deposits and withdrawals less than once a month or more 
+infrequently. 
+fin8 
+Store money in 
+account 
+=1 if any money is kept in respondent’s account(s) 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+fin9a 
+Receive account 
+balance information 
+using a mobile phone 
+or the internet 
+=1 if respondent received any information about account balance through 
+email, SMS, or a text message on a mobile phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+
+=== PAGE 7 ===
+ 
+Official Use Only 
+fin9b 
+Check account balance 
+using a mobile phone 
+or the internet 
+=1 if respondent checked their account balance using a mobile phone or a 
+computer 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+fin10 
+Has a credit card 
+= 1 if the respondent has a credit card 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of account owners (excluding mobile money accounts). 
+fin11_0 
+Has a card that you can 
+add money to and use 
+to send and receive 
+money or make 
+purchases 
+= 1 if the respondent has a card that you can add money to and use to send 
+and receive money or make purchases 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without an account at a bank or similar 
+financial institution. 
+fin11_1 
+Ever had an account at 
+a bank or similar 
+financial institution  
+ 
+=1 if respondent has ever had an account at a bank or similar financial 
+institution 
+=0 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without an account at a bank or similar 
+financial institution. 
+fin11a 
+Reason for no account: 
+too far 
+= 1 if the respondent does not have an account (excluding mobile money 
+accounts) because financial institutions are too far away 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a bank account. The country-level 
+averages in the report and the databank displayed as a share of adults 
+without an account are calculated excluding mobile money accounts. 
+fin11b 
+Reason for no account: 
+fees too expensive 
+= 1 if the respondent does not have an account (excluding mobile money 
+accounts) because financial service fees are too expensive 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a bank account. The country-level 
+averages in the report and the databank displayed as a share of adults 
+without an account are calculated excluding mobile money accounts. 
+
+=== PAGE 8 ===
+ 
+Official Use Only 
+fin11c 
+Reason for no account: 
+lack documentation 
+= 1 if the respondent does not have an account (excluding mobile money 
+accounts) because they don't have the necessary documentation 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a bank account. The country-level 
+averages in the report and the databank displayed as a share of adults 
+without an account are calculated excluding mobile money accounts. 
+fin11d 
+Reason for no account: 
+lack money 
+= 1 if the respondent does not have an account (excluding mobile money 
+accounts) because they don't have enough money to use one 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a bank account. The country-level 
+averages in the report and the databank displayed as a share of adults 
+without an account are calculated excluding mobile money accounts. 
+fin11e 
+Reason for no account: 
+family member already 
+has one 
+= 1 if the respondent does not have an account (excluding mobile money 
+accounts) because someone else in the family already has an account 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a bank account. The country-level 
+averages in the report and the databank displayed as a share of adults 
+without an account are calculated excluding mobile money accounts. 
+fin11f 
+Reason for no account: 
+lack trust 
+= 1 if the respondent does not have an account (excluding mobile money 
+accounts) because they don't trust financial institutions 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a bank account. The country-level 
+averages in the report and the databank displayed as a share of adults 
+without an account are calculated excluding mobile money accounts. 
+fin11_2 
+Could use account 
+without help 
+ 
+=1 if respondent could use a bank or similar financial institution account by 
+themselves 
+=2 if respondent would need the help of another person to open an account 
+=3 if don’t know 
+=4 if refused to answer  
+ 
+Note: Asked only of respondents without an account at a bank or similar 
+financial institution. 
+fin13_1 
+Mobile money meets 
+financial needs 
+=1 if yes, mobile money meets all financial needs 
+=2 if would like to open a bank account 
+=3 if don’t know 
+
+=== PAGE 9 ===
+ 
+Official Use Only 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents with a mobile money account but not a 
+bank account. 
+fin13a 
+Frequency of money 
+deposited into mobile 
+money accounts 
+= 1 if money is deposited into the respondent’s account(s) weekly 
+=2 if money is deposited into the respondent’s account (s) monthly 
+=3 if money is deposited into the respondent’s account less than once a 
+month 
+=4 if money is never deposited into the respondent’s account  
+=5 if don’t know 
+=6 if refused to answer 
+ 
+Note: Asked only of mobile money account owners. 
+fin13b 
+Frequency of money 
+sent from mobile 
+money accounts 
+= 1 if money is sent from the respondent’s account(s) weekly 
+=2 if money is sent from the respondent’s account (s) monthly 
+=3 if money is sent from the respondent’s account less than once a month 
+=4 if money is never sent from the respondent’s account  
+=5 if don’t know 
+=6 if refused to answer 
+ 
+Note: Asked only of mobile money account owners. 
+fin13c 
+Frequency of money 
+taken out of mobile 
+money accounts 
+= 1 if money is taken out of the respondent’s account(s) weekly 
+=2 if money is taken out of the respondent’s account (s) monthly 
+=3 if money is taken out of the respondent’s account less than once a month 
+=4 if money is never taken out of the respondent’s account  
+=5 if don’t know 
+=6 if refused to answer 
+ 
+Note: Asked only of mobile money account owners. 
+fin13d 
+Store money in mobile 
+money account 
+=1 if any money is kept in respondent’s mobile money account(s) 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of mobile money account owners. 
+fin13e 
+Asked for mobile 
+money PIN or 
+password 
+=1 if respondent received a message from someone they didn’t know asking 
+for their mobile money PIN or password 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of mobile money account owners. 
+fin13f 
+Sent money to the 
+wrong number 
+=1 if respondent sent money to the wrong number 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+
+=== PAGE 10 ===
+ 
+Official Use Only 
+ 
+Note: Asked only of mobile money account owners. 
+Fin13f_1 
+Received money back 
+after sending to the 
+wrong number 
+=1 if respondent received money back after sending to the wrong number 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of mobile money account owners who answered yes to 
+sending money to the wrong number. 
+fin14a 
+Reason for no mobile 
+money account: too far 
+= 1 if the respondent does not have a mobile money account because 
+mobile money agents are too far away 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account in Sub-
+Saharan Africa. The country-level averages in the report and the databank 
+displayed as a share of adults without an account are calculated excluding 
+financial institution accounts. 
+fin14b 
+Reason for no mobile 
+money account: too 
+expensive 
+= 1 if the respondent does not have a mobile money account because 
+available mobile money products are too expensive 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account in Sub-
+Saharan Africa. The country-level averages in the report and the databank 
+displayed as a share of adults without an account are calculated excluding 
+financial institution accounts. 
+fin14c 
+Reason for no mobile 
+money account: lack 
+documentation 
+= 1 if the respondent does not have a mobile money account because they 
+don't have the necessary documentation 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account in Sub-
+Saharan Africa. The country-level averages in the report and the databank 
+displayed as a share of adults without an account are calculated excluding 
+financial institution accounts. 
+fin14d 
+Reason for no mobile 
+money account: lack of 
+money 
+= 1 if the respondent does not have a mobile money account because they 
+don't have enough money to use a mobile money account 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account in Sub-
+Saharan Africa. The country-level averages in the report and the databank 
+
+=== PAGE 11 ===
+ 
+Official Use Only 
+displayed as a share of adults without an account are calculated excluding 
+financial institution accounts. 
+fin14e 
+Reason for no mobile 
+money account: 
+worried about security 
+= 1 if the respondent does not have a mobile money account because they 
+are worried about the safety of money in their account 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account in Sub-
+Saharan Africa. The country-level averages in the report and the databank 
+displayed as a share of adults without an account are calculated excluding 
+financial institution accounts. 
+fin15 
+Used an agent or 
+someone else to make 
+a mobile money 
+payment 
+=1 if respondent ever used an agent or someone else to make a mobile 
+money payment for them 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account.  
+fin16 
+Ever had a mobile 
+money account 
+=1 if respondent ever had a mobile money account 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents without a mobile money account in. 
+fin17a 
+Saved at a bank or 
+similar financial 
+institution 
+=1 if respondent saved at a bank or similar financial institution 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin17b 
+Saved using a mobile 
+money account 
+=1 if respondent saved using a mobile money account 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+ 
+Note: Asked only of respondents with a mobile money account. 
+fin17c 
+Saved using a savings 
+club or a person 
+outside the family   
+=1 if respondent saved using a savings club or person outside of the family 
+=2 if no 
+=3 if don’t know 
+=4 if refused to answer 
+fin17d 
+Formal saving 
+frequency 
+=1 if respondent saved using an account (bank or mobile money) weekly 
+=2 if respondent saved using an account (bank or mobile money) monthly 
+=3 if respondent saved using an account (bank or mobile money) less than 
+once a month 
+=4 if don’t know 
+=5 if refused 
+
+=== PAGE 12 ===
+ 
+Official Use Only 
+ 
+Note: Asked only of respondents who report saving using an account (bank 
+or mobile money). 
+fin17e 
+Received interest 
+=1 if respondent received additional money for the savings in their account 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who report saving using an account (bank 
+or mobile money) 
+fin17f 
+Saved formally for old 
+age 
+=1 if respondent saved or set aside money for old age 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who report saving using an account (bank 
+or mobile money) 
+ 
+fin18 
+Saved for any reason 
+=1 if respondent saved or set aside money for any reason 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who do not save using an account (bank or 
+mobile money), using a savings group or club, or for old age. 
+fin19 
+Made regular 
+payments to insurance 
+agent or company 
+=1 if respondent made regular payments to an insurance agent or company 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin20 
+Applied for a loan 
+using a mobile phone  
+ 
+=1 if respondent applied for a loan using a mobile phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin21 
+Received loan applied 
+for using a mobile 
+phone 
+ 
+=1 if respondent received a loan that they applied for using a mobile phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who report applying for a loan using a 
+mobile phone 
+fin22a 
+Borrowed from a 
+formal bank or similar 
+financial institution 
+ 
+=1 if respondent borrowed from a bank or a similar financial institution 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+
+=== PAGE 13 ===
+ 
+Official Use Only 
+fin22a_1 
+Borrowed from a 
+mobile money provider 
+= 1 if respondent borrowed from a bank or a similar financial institution 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who have a mobile money account. 
+fin22b 
+Borrowed from friends 
+or family 
+= 1 if respondent borrowed from friends or family 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin22c 
+Borrowed from an 
+informal savings club 
+=1 if respondent borrowed from an informal savings group or club 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who saved using an informal savings group 
+or club 
+fin22d 
+Borrowed for health or 
+medical purposes 
+=1 if respondent borrowed money for health or medical purposes 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin22e 
+Borrowed to start or 
+operate a business 
+=1 if respondent borrowed money to start or operate a business 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin22f 
+Purchased food on 
+credit 
+=1 if respondent purchased household food but paid for it at a later date 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin22g 
+Used a credit card 
+=1 if respondent used their credit card 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who have a credit card. 
+fin22h 
+Paid off all credit card 
+balances in full by their 
+due date 
+=1 if respondent paid off all of their credit card balances in full by their due 
+date 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who used a credit card 
+fin23 
+Borrowed money for 
+any reason 
+=1 if respondent borrowed money from any source for any reason 
+=2 if no 
+
+=== PAGE 14 ===
+ 
+Official Use Only 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who do not answer yes to fin22a, fin22a_1, 
+fin22b, fin22c, and fin22g. 
+fin24 
+Main source of 
+emergency money in 
+30 days 
+= 1 if the respondent’s main source of emergency funds is savings   
+= 2 if the respondent’s main source of emergency funds is family, relatives, 
+or friends   
+= 3 if the respondent’s main source of emergency funds is money from 
+working   
+= 4 if the respondent’s main source of emergency funds is borrowing from a 
+bank, employer, or private lender   
+= 5 if the respondent’s main source of emergency funds is sale of assets   
+= 6 if the respondent’s main source of emergency funds is from some other 
+source   
+= 7 if the respondent could not come up with the money   
+= 8 if don’t know 
+= 9 if refused to answer 
+ 
+fin24a 
+Difficulty of emergency 
+funds in 30 days 
+= 1 if the respondent would find it very difficult to come up with emergency 
+funds in the next 30 days  
+= 2 if the respondent would find it somewhat difficult to come up with 
+emergency funds in the next 30 days 
+= 3 if the respondent would not have difficulty at all coming up with 
+emergency funds in the next 30 days 
+= 4 if don’t know 
+= 5 if refused to answer 
+ 
+Note: Asked only of respondents who reported a main source of emergency 
+funds (that it would be possible to come up with emergency funds in the 
+next 30 days). 
+fin24b 
+How long household 
+could cover expenses if 
+main source of income 
+was lost 
+=1 if household could last for less than two weeks if they lost their main 
+source of income 
+=2 if household could last for about one month if they lost their main source 
+of income 
+=3 if household could last for about two months if they lost their main 
+source of income 
+=4 if household could last for more than two months if they lost their main 
+source of income 
+=5 if don’t know 
+=6 if refused 
+fin24c 
+Experienced a natural 
+disaster or severe 
+weather event 
+=1 if respondent experienced a natural disaster or severe weather event in 
+the past three years 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+
+=== PAGE 15 ===
+ 
+Official Use Only 
+fin24d1 
+Natural disaster in the 
+past three years: 
+Income lost or unable 
+to work, by self or 
+household member 
+=1 if respondent or someone in their household lost income or were unable 
+to work due to a natural disaster or severe weather event 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who experienced a natural disaster in the 
+past three years. 
+fin24d2 
+Natural disaster in the 
+past three years: 
+Damage to home or 
+livestock 
+=1 if respondent experienced damage to their home or livestock due to a 
+natural disaster or severe weather event 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who experienced a natural disaster in the 
+past three years. 
+fin24d3 
+Natural disaster in the 
+past three years: 
+Unable to access or use 
+their account to 
+withdraw cash or to 
+send or receive money 
+=1 if respondent was unable to access or use their account to withdraw cash 
+or send or receive money due to a natural disaster or severe weather event 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who experienced a natural disaster in the 
+past three years who have a bank or mobile money account. 
+fin25e1 
+Use a mobile phone or 
+card to pay for 
+household cleaning 
+supplies 
+=1 if respondent used a mobile phone or card to pay for household cleaning 
+supplies 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents with a bank or mobile money account. 
+fin25e2 
+Used a mobile phone 
+or a card to pay for an 
+in-store purchase 
+=1 if respondent used a mobile phone or a card to pay for an in-store 
+purchase in the past 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents with a bank or mobile money account. 
+fin25e3 
+Frequency of digital in-
+store merchant 
+payments  
+=1 if respondent used a card or a mobile phone to make an in-store 
+merchant payment weekly 
+=2 if respondent used a card or a mobile phone to make an in-store 
+merchant payment monthly 
+=3 if respondent used a card or a mobile phone to make an in-store 
+merchant payment less than once a month 
+=4 if don’t know 
+=5 if refused 
+ 
+
+=== PAGE 16 ===
+ 
+Official Use Only 
+Note: Asked only of respondents who report making digital in-store 
+merchant payments. 
+fin25e4 
+Main reason for only 
+using cash for in-store 
+merchant payments 
+=1 if respondent only uses cash for in-store merchant payments because the 
+merchant only accepts cash 
+=2 if respondent only uses cash for in-store merchant payments because its 
+more expensive to pay using a card or phone 
+=3 if respondent only uses cash for in-store merchant payments because 
+they don’t trust payments using a card or phone 
+=4 if respondent only uses cash for in-store merchant payments because 
+they’re used to paying in cash 
+=5 if respondent only uses cash for in-store merchant payments for some 
+other reason 
+=6 if don’t know 
+=7 if refused 
+ 
+Note: Asked only of respondents who don’t make digital in-store merchant 
+payments. 
+fin26a 
+Used a mobile phone 
+or computer to make a 
+bill payment 
+=1 if respondent personally used a mobile phone or computer to make a bill 
+payment in the past 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents with a bank or mobile money account. 
+fin26b 
+Used a mobile phone 
+or the internet to buy 
+something online 
+=1 if respondent bought something online that was delivered to them in the 
+past 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents with a bank or mobile money account. 
+fin27 
+Online purchase mode 
+of payment 
+=1 if respondent bought something online that was delivered to them and 
+paid online 
+=2 if respondent bought something online that was delivered to them and 
+paid in cash 
+=3 if respondent bought something online that was delivered to them and 
+paid both online and in cash 
+=4 if don’t know 
+=5 if refused 
+ 
+Note: Asked only of respondents who report buying something online that 
+was delivered 
+fh1 
+Made a domestic 
+remittance 
+=1 if respondent gave or sent money to relatives or friends living in a 
+different city in the same country 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+
+=== PAGE 17 ===
+ 
+Official Use Only 
+fin28 
+Made a digital 
+domestic remittance 
+=1 if respondent gave or sent money to relatives or friends in a different city 
+in the same country directly from an account or phone  
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who made a domestic remittance 
+payment. 
+fh2 
+Received a domestic 
+remittance 
+=1 if respondent received money from relatives or friends in a different city 
+in the same country 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin29 
+Received a digital 
+domestic remittance 
+=1 if respondent received money from relatives or friends in a different city 
+in the same country directly into an account or phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received a domestic remittance 
+payment. 
+fh2a 
+Received an 
+international 
+remittance payment 
+=1 if respondent received money from relatives or friends living in a 
+different country 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin30 
+Made a utility payment 
+=1 if respondent made regular payments for electricity, water, or trash 
+collection 
+=2 if no 
+=3 if refused 
+=4 if refused 
+fin31a 
+Made a utility payment 
+using a bank account 
+=1 if respondent made a regular utility payment using a bank or similar 
+financial institution account 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who made a utility payment. 
+fin31b 
+Made a utility payment 
+using a mobile phone 
+=1 if respondent made a regular utility payment using a mobile phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who made a utility payment. 
+
+=== PAGE 18 ===
+ 
+Official Use Only 
+fin31c 
+Made a utility payment 
+by handing cash to a 
+bank agent or staff 
+=1 if respondent made a regular utility payment by handing cash to bank 
+staff or an agent 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents without an account (bank or mobile 
+money) and who make a utility payment either using a bank account or 
+mobile money. 
+fin31d 
+Made utility payments 
+exclusively in cash 
+=1 if respondent made a regular utility payment exclusively using cash  
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who pay for utilities but not using a bank 
+or mobile money account. 
+fin32 
+Received a wage 
+payment 
+=1 if respondent received a salary or wages from an employer in the past 12 
+months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin33 
+Employed by the 
+government, military, 
+or public sector 
+=1 if respondent has been employed by the government, military or public 
+sector in the last 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer. 
+fin34a 
+Received wage 
+payment into a bank or 
+similar institution 
+account 
+=1 if respondent received wage or salary payments into an account at a 
+bank or similar financial institution 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer. 
+fin34b 
+Received a wage 
+payment through a 
+mobile phone 
+=1 if respondent received wage or salary payments through a mobile phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer. 
+fin34c 
+Received a wage 
+payment in cash 
+=1 if respondent received wage or salary payments in cash 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+
+=== PAGE 19 ===
+ 
+Official Use Only 
+Note: Asked only of respondents who received a wage from an employer 
+and who did not receive it into an account or mobile phone. 
+fin34d 
+Received a wage 
+payment into a card 
+=1 if respondent received wage or salary payments into a card 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer 
+and who did not receive it into an account, mobile phone, or in cash. 
+fin35 
+Paid an unexpected fee 
+to withdraw wages 
+=1 if respondent paid a fee that was more than expected when they 
+withdrew their salary or wages from their account 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer 
+into a bank account, mobile phone, or card. 
+fin36 
+Mode of wage 
+withdrawal from 
+account 
+=1 if respondent takes out entire wage as cash at once  
+=2 if respondent leaves some money in their account 
+=3 if respondent transfers money to another personal account 
+=4 if don’t know 
+=5 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer 
+into a bank account, mobile phone, or card. 
+fin36a 
+Person withdrawing 
+wage from account 
+=1 if respondent withdrew their wages from their account themself 
+=2 if a friend or family member took out their wages from their account for 
+them 
+=3 if respondent both withdrew their wages themself AND had a friend or 
+family withdraw them for them 
+=4 if don’t know 
+=5 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer 
+into a bank account, mobile phone, or card. 
+fin37 
+Received financial 
+support from the 
+government 
+=1 if respondent received any financial support from the government in the 
+past 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin38 
+Received a public 
+sector pension 
+=1 if respondent received a pension from the government, military, or public 
+sector in the past 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+
+=== PAGE 20 ===
+ 
+Official Use Only 
+fin39a 
+Received money from 
+the government into a 
+bank account 
+=1 if respondent received money from the government directly into an 
+account at a bank or similar financial institution 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received financial support from the 
+government or a public sector pension. 
+fin39b 
+Received money from 
+the government 
+through a mobile 
+phone 
+=1 if respondent received money from the government through a mobile 
+phone 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received financial support from the 
+government or a public sector pension. 
+fin39c 
+Received money from 
+the government only in 
+cash 
+=1 if respondent received money from the government only in cash 
+=2 if no 
+=3 if don't know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received financial support from the 
+government or a public sector pension but not into an account or mobile 
+phone. 
+fin39d 
+Received money from 
+the government into a 
+card 
+=1 if respondent received money from the government into a card 
+=2 if no 
+=3 if don't know 
+=4 if refused 
+ 
+Note: Asked only of respondents who received financial support from the 
+government or a public sector pension but not into an account or mobile 
+phone or in cash. 
+fin40 
+Mode of government 
+money withdrawal 
+from account 
+=1 if respondent takes out money as cash at once  
+=2 if respondent leaves some money in their account 
+=3 if respondent transfers money to another personal account 
+=4 if don’t know 
+=5 if refused 
+ 
+Note: Asked only of respondents who received money from the government 
+into a bank account, mobile phone, or card. 
+fin41 
+Paid an unexpected fee 
+to withdraw 
+government money 
+from account 
+=1 if respondent paid a fee that was more than expected when they 
+withdrew money from the government from their account 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+
+=== PAGE 21 ===
+ 
+Official Use Only 
+Note: Asked only of respondents who received money from the government 
+into a bank account, mobile phone, or card. 
+fin41a 
+Person withdrawing 
+money from the 
+government from 
+account 
+=1 if respondent withdrew their money from the government from their 
+account themself 
+=2 if a friend or family member took out their money from the government 
+from their account for them 
+=3 if respondent both withdrew their money from the government themself 
+AND had a friend or family withdraw them for them 
+=4 if don’t know 
+=5 if refused 
+ 
+Note: Asked only of respondents who received a wage from an employer 
+into a bank account, mobile phone, or card. 
+fin42 
+Received an 
+agricultural payment 
+=1 if respondent received money for the sale of agricultural products, crops, 
+produce, or livestock in the past 12 months 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+fin43a 
+Received an 
+agricultural payment 
+into a bank account 
+=1 if respondent received an agricultural payment into an account at a bank 
+or similar financial institution 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who receive money for the sale of 
+agricultural products. 
+fin43b 
+Received an 
+agricultural payment 
+through a mobile 
+phone 
+=1 if respondent received an agricultural payment through a mobile phone 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who receive money for the sale of 
+agricultural products. 
+fin43c 
+Received an 
+agricultural payment 
+only in cash 
+=1 if respondent received an agricultural payment only in cash 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who receive money for the sale of 
+agricultural products but not into an account or through a mobile phone. 
+fin43d 
+Received an 
+agricultural payment 
+into a card 
+=1 if respondent received an agricultural payment into a card 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+
+=== PAGE 22 ===
+ 
+Official Use Only 
+Note: Asked only of respondents who receive money for the sale of 
+agricultural products but not into an account, through a mobile phone, or in 
+cash. 
+fin44 
+Use phone or internet 
+to access weather or 
+farming information 
+=1 if respondent uses a phone or the internet to access information such as 
+weather updates, pest control, or farming tips 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: Asked only of respondents who receive money for the sale of 
+agricultural goods. 
+fin45 
+Greatest financial 
+worry 
+=1 if respondent is most worried about not having enough money for their 
+old age 
+=2 if respondent is most worried about not having enough money for their 
+business 
+=3 if respondent is most worried about not having enough money for 
+medical costs in case of a serious illness or accident 
+=4 if respondent is most worried about not having enough money for 
+monthly expenses, such as food, housing, or bills 
+=5 if respondent is most worried about not having enough money for school 
+or education fees 
+=6 if respondent is most worried about not having enough money for some 
+other reason 
+=7 if don’t know 
+=8 if refused 
+ 
+Note: Respondents can only select one reason. 
+ 
+ 
+ 
+ 
+Global Findex Digital Connectivity Tracker Constructed Variables 
+Using responses from multiple questionnaire variables 
+ 
+ 
+internet 
+Used the internet 
+within the past three 
+months 
+=1 if respondent has used the internet in the past three months 
+=0 if respondent has not used the internet in the past three months 
+ 
+Global Findex Digital Connectivity Tracker Questionnaire Variables 
+ 
+con1 
+Have a mobile phone 
+=1 if respondent has a mobile phone that they use to make and receive 
+personal calls 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+
+=== PAGE 23 ===
+ 
+Official Use Only 
+con2a 
+Reason for no phone: 
+lack of money 
+=1 if respondent does not have a mobile phone because they do not have 
+enough money to buy a mobile phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con2b 
+Reason for no phone: 
+mobile minutes are too 
+expensive 
+=1 if respondent does not have a mobile phone because buying minutes is 
+too expensive 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con2c 
+Reason for no mobile 
+phone: lack of reliable 
+coverage 
+=1 if respondent does not have a mobile phone because there isn’t reliable 
+coverage where they live 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con2d 
+Reason for no mobile 
+phone: difficulties 
+reading or typing 
+=1 if respondent does not have a mobile phone because they have 
+difficulties reading or typing on a mobile phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con2e 
+Reason for no mobile 
+phone: family or 
+community disapproval 
+=1 if respondent does not have a mobile phone because people in their 
+family or community disapprove 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con2f 
+Reason for no mobile 
+phone: worried about 
+safety or security 
+=1 if respondent does not have a mobile phone because they are worried 
+about their personal safety or security when using a mobile phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con2g 
+Reason for no mobile 
+phone: used someone 
+else’s mobile phone 
+=1 if respondent does not have a mobile phone because they use someone 
+else’s mobile phone 
+=2 if no 
+=8 if don’t know 
+
+=== PAGE 24 ===
+ 
+Official Use Only 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con3 
+Main reason for not 
+having a mobile phone 
+=1 if the main reason the respondent doesn’t have a mobile phone is not 
+having enough money to buy a mobile phone 
+=2 if the main reason the respondent doesn’t have a mobile phone is that 
+buying minutes is too expensive 
+=3 if the main reason the respondent doesn’t have a mobile phone is that 
+there is not reliable internet coverage where they live 
+=4 if the main reason the respondent doesn’t have a mobile phone is that 
+they have difficulties reading or typing on a mobile phone 
+=5 if the main reason the respondent doesn’t have a mobile phone is that 
+people in their family or community disapprove 
+=6 if the main reason the respondent doesn’t have a mobile phone is that 
+they are worried about their personal safety or security when using a mobile 
+phone 
+=7 if the main reason the respondent doesn’t have a mobile phone is that 
+they use someone else’s mobile phone 
+=97 if the main reason the respondent doesn’t have a mobile phone is some 
+other reason or none of these reasons 
+=98 if don’t know 
+=99 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. Respondents are 
+only asked about a reason if they responded “yes” to it above. 
+con4 
+Used someone else’s 
+mobile phone 
+=1 if respondent used someone else’s mobile phone in the past three 
+months 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents without a mobile phone. 
+con5 
+Type of phone used 
+when using someone 
+else’s phone 
+=1 if respondent used someone else’s smartphone 
+=2 if respondent used someone else’s basic text phone 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who report using someone else's phone. 
+con6 
+Personal SIM card used 
+in someone else’s 
+phone 
+=1 if respondent has a personal SIM card that they used in another person’s 
+mobile phone in the past 3 months 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who report using someone else’s phone. 
+con7 
+Rules for using 
+someone else’s phone 
+=1 if respondent has rules set for them about how they can use someone 
+else’s mobile phone 
+
+=== PAGE 25 ===
+ 
+Official Use Only 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who report using someone else’s phone. 
+con8 
+Someone in the 
+household owns a 
+mobile phone 
+=1 if someone in the respondent’s household owns a mobile phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who do not own a mobile phone and who 
+have not used someone else’s in the past 3 months 
+con9 
+Type of phone 
+=1 if the main phone the respondent uses is a smartphone 
+=2 if the main phone the respondent uses is a basic text phone 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone. 
+con10 
+Could use whatsapp on 
+basic phone 
+=1 if respondent could use WhatsApp on their basic phone if they wanted to 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who own a basic text phone. 
+con11 
+SIM registered in own 
+name 
+=1 if SIM number in respondent’s phone is registered in their name 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone. 
+con12 
+Mobile phone use 
+frequency 
+=1 if respondent uses their mobile phone daily 
+=2 if respondent uses their mobile phone weekly 
+=3 if respondent uses their mobile phone monthly 
+=4 if respondent uses their mobile phone less than once a month 
+=7 if respondent uses their mobile phone never 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone. 
+con13 
+Used a mobile phone 
+in the past three 
+months 
+=1 if respondent used a mobile phone in the past three months 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a phone but did not use it daily, 
+weekly, or monthly. 
+
+=== PAGE 26 ===
+ 
+Official Use Only 
+con14 
+Read a text message 
+=1 if respondent has read a text message on a mobile phone. This can 
+include an SMS or text message or a message on a messaging app like 
+WhatsApp. 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone. 
+con15 
+Can understand a text 
+message with English 
+letters 
+=1 if respondent could understand a text message in the language of the 
+interview written using English letters like “A”, “B”, “C”.  
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who read a text message 
+con16 
+Sent a text message 
+=1 if the respondent has ever sent a text message on a mobile phone. This 
+can include an SMS or text message or a message on a messaging app like 
+WhatsApp. 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who read a text message. 
+con17 
+Preferred mode of 
+government 
+communication 
+=1 if respondent prefers to receive important news from the government by 
+SMS or text message 
+=2 if respondent prefers to receive important news from the government by 
+a phone call with a recorded voice 
+=3 if respondent prefers to receive important news from the government by 
+neither a text message nor a voice call 
+=4 if respondent prefers to receive important news from the government by 
+both/either a text message or a voice call 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone. 
+con18 
+Have a PIN or 
+password on mobile 
+phone 
+=1 if respondent has lock on their mobile phone such as a PIN. Password, or 
+fingerprint 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents with a mobile phone. 
+con19 
+Can change PIN or 
+password 
+=1 if respondent is able to change the PIN or password on their mobile 
+phone without help 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+
+=== PAGE 27 ===
+ 
+Official Use Only 
+ 
+Note: Asked only of respondents who have a PIN/password on their mobile 
+phone. 
+con20 
+Rules about using own 
+phone 
+=1 if someone such as a family member sets rules about how respondent 
+can use their own phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents with a mobile phone. 
+con21 
+Received scam text or 
+call 
+=1 if respondent received a phone call or SMS or text message on their 
+mobile phone from someone they don’t know asking for money in the past 
+12 months 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents with a mobile phone. 
+con22 
+Sent money to 
+scammer 
+=1 if respondent sent money to person they did not know asking for money 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who received a text or call from someone 
+they didn’t know asking for money. 
+con23 
+Received unwanted or 
+offensive messages 
+=1 if respondent received unwanted and offensive messages, photos, or 
+videos to their mobile phone in the past 12 months 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents with a mobile phone. 
+con24 
+Used the internet in 
+the past 7 days 
+=1 if respondent used the internet in the past 7 days 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+con25 
+Used the internet in 
+the past 3 months 
+=1 if respondent used the internet in the past 3 months 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who do not report using the internet in the 
+past 7 days. 
+con26 
+Frequency of internet 
+use 
+=1 if respondent uses the internet daily 
+=2 if respondent uses the internet weekly 
+
+=== PAGE 28 ===
+ 
+Official Use Only 
+=3 if respondent uses the internet monthly 
+=4 if respondent uses the internet less than once a month 
+=7 if respondent never uses the internet  
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months. 
+con27 
+Purchase a data 
+package 
+=1 if respondent buys a data package to use the internet 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months. 
+con28 
+Frequency of data 
+package purchase 
+=1 if respondent purchases their data package daily 
+=2 if respondent purchases their data package weekly 
+=3 if respondent purchases their data package monthly 
+=4 if respondent purchases their data package less than once a month 
+=7 if respondent never purchases their data package 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who purchased a data package. 
+con29 
+Connect to the internet 
+only through free WiFi 
+=1 if respondent connects to the internet only through free WiFi 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 
+three months but who did not purchase a data package. 
+con30a 
+Sent a voice message 
+from a mobile phone 
+=1 if respondent sent a voice message from a mobile phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+con30b 
+Sent a photo from a 
+mobile phone 
+=1 if respondent sent a photo from a mobile phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+
+=== PAGE 29 ===
+ 
+Official Use Only 
+con30c 
+Used social media on a 
+mobile phone 
+=1 if respondent used social media, like Facebook or TikTok, on a mobile 
+phone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+con30d 
+Read about news or 
+current events online 
+=1 if respondent read about news or current events online 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+con30e 
+Accessed educational 
+information online 
+=1 if respondent accessed information online to learn, train, or educate 
+themself or someone else 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+con30f 
+Earned money online 
+=1 if respondent used apps or websites to earn money, for example, by 
+selling goods or services online 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+con30g 
+Accessed government 
+services or searched 
+for government 
+information online 
+=1 if respondent accessed government services or searched for government 
+information online 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+con30h 
+Searched or applied for 
+a job online 
+=1 if respondent searched or applied for a job online 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who used the internet within the past 3 
+months or who have a smartphone. 
+
+=== PAGE 30 ===
+ 
+Official Use Only 
+con31a 
+Reason for no 
+smartphone: not 
+enough money 
+=1 if respondent does not have a smartphone because they don’t have 
+enough money to buy one 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31b 
+Reason for no 
+smartphone: data plan 
+is too expensive 
+=1 if respondent does not have a smartphone because buying a mobile data 
+plan is too expensive 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31c 
+Reason for no 
+smartphone: no 
+reliable coverage 
+=1 if respondent does not have a smartphone because of a lack of reliable 
+internet coverage where they live 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31d 
+Reason for no 
+smartphone: 
+difficulties reading or 
+typing on a 
+smartphone 
+=1 if respondent does not have a smartphone because of difficulties reading 
+or typing on a smartphone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31e 
+Reason for no 
+smartphone: family or 
+community disapproval 
+=1 if respondent does not have a smartphone because of family or 
+community disapproval 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31f 
+Reason for no 
+smartphone: worried 
+about safety or 
+security 
+=1 if respondent does not have a smartphone because they are worried 
+about their personal safety or security when using a smartphone 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+
+=== PAGE 31 ===
+ 
+Official Use Only 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31g 
+Reason for no 
+smartphone: use 
+someone else’s 
+smartphone 
+=1 if respondent does not have a smartphone because they use someone 
+else’s 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con31h 
+Reason for no 
+smartphone: no need 
+=1 if respondent does not have a smartphone because they have no need 
+for one 
+=2 if no 
+=8 if don’t know 
+=9 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. 
+con32 
+Main reason for not 
+having a smartphone 
+=1 if main reason for respondent not having a smartphone is that they don’t 
+have enough money to buy a smartphone 
+=2 if main reason for respondent not having a smartphone is that buying a 
+mobile data plan is too expensive 
+=3 if main reason for respondent not having a smartphone is that there isn’t 
+reliable internet coverage where they live 
+=4 if main reason for respondent not having a smartphone is that they have 
+difficulties reading or typing 
+=5 if main reason for respondent not having a smartphone is family or 
+community disapproval 
+=6 if main reason for respondent not having a smartphone is that they are 
+worried about their personal safety or security when using a smartphone 
+=7 if main reason for respondent not having a smartphone is that they use 
+someone else’s smartphone 
+=8 if main reason for respondent not having a smartphone is that they have 
+no need for one 
+=97 if main reason for respondent not having a smartphone is some other 
+reason or none of these reasons 
+=98 if don’t know 
+=99 if refused 
+ 
+Note: Asked only of respondents who have a mobile phone but not a 
+smartphone. Respondents were only able to select from barriers to 
+smartphone ownership that they listed above. 
+ 
+ 
+Identification for Development (ID4D)–Global Findex Database 2025 Questionnaire Variables 
+ 
+
+=== PAGE 32 ===
+ 
+Official Use Only 
+fin46 
+ID ownership 
+ 
+=1 if respondent reports owning a foundational ID (national ID or similar 
+credential) 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. 
+fin47 
+Foundational ID has 
+been used without 
+permission for illegal 
+purposes 
+=1 if respondent reports that their foundational ID has been used without 
+their permission for illegal purposes 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+with foundational ID.  
+fin48a 
+Reason no ID: Have 
+another ID 
+=1 if respondent does not have an ID because they have another form of 
+identification issued by the government 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin48b 
+Reason no ID: Do not 
+need an ID 
+ 
+=1 if respondent does not have an ID because they do not need one 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin48c 
+Reason no ID: Too 
+expensive 
+ 
+=1 if respondent does not have an ID because getting an ID is too expensive 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin48d 
+Reason no ID: No 
+documents 
+ 
+=1 if respondent does not have an ID because they lack the necessary 
+documents 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+
+=== PAGE 33 ===
+ 
+Official Use Only 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin48e 
+Reason no ID: Travel 
+too far 
+ 
+=1 if respondent does not have an ID because they would need to travel too 
+far to register 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin48f 
+Reason no ID: 
+Uncomfortable sharing 
+information 
+=1 if respondent does not have an ID because they feel uncomfortable 
+sharing their personal information 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin49a 
+Challenge: Receiving 
+financial support from 
+the government 
+=1 if respondent reports being unable to receive financial support from the 
+government because they lack an ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin49b 
+Challenge: Using 
+financial services 
+ 
+=1 if respondent reports being unable to use financial services because they 
+lack an ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin49c 
+Challenge: Obtaining a 
+SIM card 
+ 
+=1 if respondent reports being unable to obtain a SIM card or mobile phone 
+service because they lack an ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+
+=== PAGE 34 ===
+ 
+Official Use Only 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin49d 
+Challenge: 
+Participating in 
+elections 
+ 
+=1 if respondent reports being unable to participate in elections because 
+they lack an ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin49e 
+Challenge: Applying for 
+a job 
+ 
+=1 if respondent reports being unable to apply for a job because they lack 
+an ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused  
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin49f 
+Challenge: Receiving 
+medical care 
+ 
+=1 if respondent reports being unable to receive medical care because they 
+lack an ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+without foundational ID. 
+fin50 
+Online digital ID 
+ownership 
+ 
+=1 if respondent reports owning an online digital ID 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. 
+fin51 
+Online digital ID has 
+been used on phone or 
+computer to confirm 
+identity online 
+ 
+=1 if respondent reports using their online digital ID to confirm their identity 
+online 
+=2 if no 
+=3 if don’t know 
+=4 if refused 
+ 
+Note: If the minimum age for obtaining an ID in an economy is above 15, 
+observations below the minimum age are excluded. Asked only of adults 
+with an online digital ID. 
+
+=== PAGE 35 ===
+ 
+Official Use Only 
+ 
+ 
+ 
+ 
+Note: For documentation of which questions are asked in each economy please refer to the indicator 
+mapping document here. 
+
