@@ -56,11 +56,8 @@ data/processed/*.pkl
 outputs/figures/*.pdf
 outputs/figures/*.png
 outputs/figures/*.jpg
-outputs/tables/*.csv
+# Note: outputs/tables/*.csv are NOT ignored — the dashboard needs them
 outputs/tables/*.xlsx
-# Keep example outputs:
-!outputs/figures/example_*.png
-!outputs/tables/example_*.csv
 
 # OS-Specific
 # ----------------------------------------------------------------------------

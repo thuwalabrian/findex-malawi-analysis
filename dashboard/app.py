@@ -2585,10 +2585,13 @@ def export_current_view(n_clicks, active_tab, filter_state):
 
 
 if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8050))
+    debug = os.environ.get("RENDER") is None  # Disable debug on Render
     print("\n" + "=" * 60)
     print("  FINANCIAL INCLUSION DASHBOARD")
     print("  Global Findex 2024 | Malawi")
     print("=" * 60)
-    print("  URL: http://127.0.0.1:8050/")
+    print(f"  URL: http://0.0.0.0:{port}/")
     print("=" * 60 + "\n")
-    app.run(debug=True, host="127.0.0.1", port=8050)
+    app.run(debug=debug, host="0.0.0.0", port=port)
