@@ -1,0 +1,47 @@
+# Git Attributes Configuration
+# Ensures proper handling of files across platforms and repositories
+
+# ============================================================================
+# Large Files - Prevent Accidental Pushes
+# ============================================================================
+# Warn if files exceed 50MB
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.parquet filter=lfs diff=lfs merge=lfs -text
+*.db filter=lfs diff=lfs merge=lfs -text
+
+# ============================================================================
+# Binary Files
+# ============================================================================
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.tar.gz binary
+
+# ============================================================================
+# Notebook Files (preserve line endings)
+# ============================================================================
+*.ipynb text eol=lf diff=jupyter
+
+# ============================================================================
+# Documentation
+# ============================================================================
+*.md text eol=lf
+README.md text eol=lf merge=union
+DATA_DICTIONARY.md text eol=lf merge=union
+CONTRIBUTING.md text eol=lf merge=union
+
+# ============================================================================
+# Python Code
+# ============================================================================
+*.py text eol=lf
+*.pyi text eol=lf
+
+# ============================================================================
+# Shell Scripts
+# ============================================================================
+*.sh text eol=lf
+*.bat text eol=crlf

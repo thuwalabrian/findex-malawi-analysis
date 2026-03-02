@@ -1,0 +1,21 @@
+# CODEOWNERS
+# This file defines responsibility and ownership of project areas
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Overall project ownership
+* @thuwalabrian
+
+# Data handling and licensing
+data/ @thuwalabrian
+DATA_DICTIONARY.md @thuwalabrian
+CONTRIBUTING.md @thuwalabrian
+
+# Dashboard code
+dashboard/ @thuwalabrian
+
+# Analysis notebooks  
+notebooks/ @thuwalabrian
+
+# Documentation
+README.md @thuwalabrian
+LICENSE @thuwalabrian

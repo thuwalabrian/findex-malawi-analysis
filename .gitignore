@@ -42,9 +42,9 @@ ipython_config.py
 
 # Data Files (excluding raw source data)
 # ----------------------------------------------------------------------------
-# Uncomment if data is sensitive or too large:
-# data/raw/*.csv
-# data/raw/*.xlsx
+# ⚠️ IMPORTANT: Microdata is protected. Users must download from World Bank.
+data/raw/*.csv
+data/raw/*.xlsx
 data/processed/*.csv
 data/processed/*.parquet
 data/processed/*.pkl
