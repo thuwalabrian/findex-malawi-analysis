@@ -118,7 +118,7 @@ def safe_value(series, default=0.0):
         return default
 
 
-def generate_insights(gender_value="all", quintile_value="all"):
+def generate_insights():
     """Generate AI-powered insights from data"""
     insights = []
     try:
@@ -276,7 +276,7 @@ def apply_theme(fig, height=400):
     return fig
 
 
-def get_kpi_snapshot(gender_value="all", quintile_value="all"):
+def get_kpi_snapshot():
     stats = cached("summary", get_summary_stats)
     gender = cached("gender", load_gender_gap)
     income = cached("income", load_income_gradient)
@@ -345,9 +345,9 @@ def make_kpi(title, value, icon, color, soft_color):
     )
 
 
-def create_insights_panel(gender_value="all", quintile_value="all"):
+def create_insights_panel():
     """Create insights panel with AI-generated insights"""
-    insights = generate_insights(gender_value, quintile_value)
+    insights = generate_insights()
 
     insight_items = []
     icon_map = {
@@ -605,8 +605,8 @@ def create_global_controls(gender_value="all", quintile_value="all"):
     )
 
 
-def create_kpi_row(gender_value="all", quintile_value="all"):
-    stats = get_kpi_snapshot(gender_value, quintile_value)
+def create_kpi_row():
+    stats = get_kpi_snapshot()
     fmt = lambda v: f"{float(v):.1f}%"
     return dbc.Row(
         [
@@ -859,7 +859,7 @@ def create_footer():
     )
 
 
-def create_overview_tab(gender_value="all", quintile_value="all"):
+def create_overview_tab():
     national = cached("national", load_national_indicators)
     gender = cached("gender", load_gender_gap)
 
@@ -975,8 +975,8 @@ def create_overview_tab(gender_value="all", quintile_value="all"):
                 ],
                 className="page-header",
             ),
-            create_kpi_row(gender_value, quintile_value),
-            create_insights_panel(gender_value, quintile_value),
+            create_kpi_row(),
+            create_insights_panel(),
             html.Div(className="section-divider"),
             dbc.Card(
                 [
@@ -1015,7 +1015,7 @@ def create_overview_tab(gender_value="all", quintile_value="all"):
     )
 
 
-def create_demographics_tab(gender_value="all", quintile_value="all"):
+def create_demographics_tab():
     income = cached("income", load_income_gradient)
     education = cached("education", load_education_gradient)
 
@@ -1207,7 +1207,7 @@ def create_demographics_tab(gender_value="all", quintile_value="all"):
     )
 
 
-def create_barriers_tab(gender_value="all", quintile_value="all"):
+def create_barriers_tab():
     barriers = cached("barriers", load_barriers)
     s = barriers.sort_values("Prevalence (%)", ascending=True)
 
@@ -1350,7 +1350,7 @@ def create_barriers_tab(gender_value="all", quintile_value="all"):
     )
 
 
-def create_guide_tab(gender_value="all", quintile_value="all"):
+def create_guide_tab():
     """Create an interactive guide for new users"""
     return html.Div(
         [
@@ -1789,7 +1789,7 @@ def create_guide_tab(gender_value="all", quintile_value="all"):
     )
 
 
-def create_policy_tab(gender_value="all", quintile_value="all"):
+def create_policy_tab():
     policy = cached("policy", load_policy_priorities)
 
     # Priority matrix chart
@@ -1989,7 +1989,7 @@ def create_policy_tab(gender_value="all", quintile_value="all"):
     )
 
 
-def create_models_tab(gender_value="all", quintile_value="all"):
+def create_models_tab():
     reg = cached("reg_any", lambda: load_regression_results("any_account"))
     df = reg[reg["Variable"] != "Intercept"].sort_values("Coef", ascending=True)
 
@@ -2195,11 +2195,6 @@ app.layout = html.Div(
     [
         dcc.Location(id="url", refresh=False),
         dcc.Store(id="active-tab-store", data="overview"),
-        dcc.Store(
-            id="filter-store",
-            storage_type="session",
-            data={"gender": "all", "quintile": "all"},
-        ),
         dcc.Download(id="download-export"),
         create_header(),
         dbc.Container(
@@ -2214,21 +2209,13 @@ app.layout = html.Div(
                     ),
                     dbc.Col(
                         [
-                            html.Div(
-                                id="controls-container",
-                                children=create_global_controls("all", "all"),
-                            ),
-                            html.Div(
-                                id="active-filter-badge",
-                                className="mb-3",
-                            ),
                             dcc.Loading(
                                 id="main-loading",
                                 type="circle",
                                 color=P["accent"],
                                 children=html.Div(
                                     id="page-content",
-                                    children=create_overview_tab("all", "all"),
+                                    children=create_overview_tab(),
                                 ),
                             ),
                             create_footer(),
@@ -2270,118 +2257,11 @@ def update_sidebar(active_tab):
 
 
 @app.callback(
-    Output("active-filter-badge", "children"),
-    Input("filter-store", "data"),
-    prevent_initial_call=False,
-)
-def update_filter_badge(filter_state):
-    s = filter_state or {"gender": "all", "quintile": "all"}
-    gender = s.get("gender", "all")
-    quintile = s.get("quintile", "all")
-
-    if gender == "all" and quintile == "all":
-        return html.Div()
-
-    badges = []
-    if gender != "all":
-        badges.append(
-            html.Span(
-                [
-                    html.I(className="fas fa-venus-mars me-1"),
-                    f"Gender: {gender}",
-                ],
-                className="filter-active-badge",
-            )
-        )
-    if quintile != "all":
-        badges.append(
-            html.Span(
-                [
-                    html.I(className="fas fa-chart-column me-1"),
-                    f"Income: {quintile}",
-                ],
-                className="filter-active-badge",
-            )
-        )
-
-    return html.Div(
-        [
-            html.I(
-                className="fas fa-filter me-2",
-                style={"color": P["accent"], "fontSize": "0.75rem"},
-            ),
-            html.Span(
-                "Active Filters: ",
-                style={
-                    "color": P["text2"],
-                    "fontSize": "0.8rem",
-                    "marginRight": "0.5rem",
-                },
-            ),
-        ]
-        + badges,
-        className="d-flex align-items-center",
-    )
-
-
-@app.callback(
-    Output("filter-store", "data"),
-    [
-        Input({"type": "gender-btn", "index": ALL}, "n_clicks"),
-        Input("quintile-filter", "value"),
-        Input("reset-filters", "n_clicks"),
-    ],
-    State("filter-store", "data"),
-    prevent_initial_call=True,
-)
-def sync_filters(gender_clicks, quintile_value, reset_clicks, state):
-    s = state or {"gender": "all", "quintile": "all"}
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        return s
-    trig = ctx.triggered[0]["prop_id"]
-    if trig.startswith("reset-filters"):
-        return {"gender": "all", "quintile": "all"}
-    if '"type":"gender-btn"' in trig:
-        import json
-
-        btn_id = json.loads(trig.split(".")[0])
-        return {
-            "gender": btn_id["index"],
-            "quintile": s.get("quintile", "all"),
-        }
-    return {
-        "gender": s.get("gender", "all"),
-        "quintile": quintile_value or s.get("quintile", "all"),
-    }
-
-
-@app.callback(
-    Output("gender-btn-group", "children"),
-    Input("filter-store", "data"),
-    prevent_initial_call=False,
-)
-def update_gender_buttons(filter_state):
-    s = filter_state or {"gender": "all", "quintile": "all"}
-    return _build_gender_buttons(s.get("gender", "all"))
-
-
-@app.callback(
-    Output("quintile-filter", "value"),
-    Input("reset-filters", "n_clicks"),
-    prevent_initial_call=True,
-)
-def reset_dropdown_values(n_clicks):
-    return "all"
-
-
-@app.callback(
     [Output("page-content", "children"), Output("active-tab-store", "data")],
-    [Input("url", "pathname"), Input("filter-store", "data")],
+    Input("url", "pathname"),
 )
-def display_page(pathname, filter_state):
+def display_page(pathname):
     try:
-        s = filter_state or {"gender": "all", "quintile": "all"}
         routes = {
             "/": ("overview", create_overview_tab),
             "/overview": ("overview", create_overview_tab),
@@ -2392,7 +2272,7 @@ def display_page(pathname, filter_state):
             "/guide": ("guide", create_guide_tab),
         }
         tab, builder = routes.get(pathname, ("overview", create_overview_tab))
-        content = builder(s.get("gender", "all"), s.get("quintile", "all"))
+        content = builder()
         return content, tab
     except Exception as e:
         # Error fallback
@@ -2557,35 +2437,9 @@ def open_barrier_modal(click_data, close_clicks, is_open):
     return True, f"🔍 {barrier_name}", body
 
 
-@app.callback(
-    Output("download-export", "data"),
-    Input("export-view-btn", "n_clicks"),
-    [State("active-tab-store", "data"), State("filter-store", "data")],
-    prevent_initial_call=True,
-)
-def export_current_view(n_clicks, active_tab, filter_state):
-    if not n_clicks:
-        return dash.no_update
-    s = filter_state or {"gender": "all", "quintile": "all"}
-    mapping = {
-        "overview": cached("national", load_national_indicators),
-        "demographics": cached("income", load_income_gradient),
-        "barriers": cached("barriers", load_barriers),
-        "policy": cached("policy", load_policy_priorities),
-        "models": cached("reg_any", lambda: load_regression_results("any_account")),
-    }
-    out = mapping.get(
-        active_tab or "overview", cached("national", load_national_indicators)
-    ).copy()
-    out["Filter_Gender"] = s.get("gender", "all")
-    out["Filter_Quintile"] = s.get("quintile", "all")
-    return dcc.send_data_frame(
-        out.to_csv, f"findex_{active_tab or 'overview'}_export.csv", index=False
-    )
-
-
 if __name__ == "__main__":
     import os
+
     port = int(os.environ.get("PORT", 8050))
     debug = os.environ.get("RENDER") is None  # Disable debug on Render
     print("\n" + "=" * 60)
