@@ -278,8 +278,6 @@ def apply_theme(fig, height=400):
 
 def get_kpi_snapshot():
     stats = cached("summary", get_summary_stats)
-    gender = cached("gender", load_gender_gap)
-    income = cached("income", load_income_gradient)
 
     kpi = {
         "any_account": float(stats.get("any_account", 0) or 0),
@@ -289,28 +287,6 @@ def get_kpi_snapshot():
         "saved": float(stats.get("saved", 0) or 0),
         "borrowed": float(stats.get("borrowed", 0) or 0),
     }
-
-    if gender_value in GENDER_MAP:
-        gcol = GENDER_MAP[gender_value]
-        kpi["any_account"] = safe_value(
-            gender.loc[gender["Indicator"] == "Any Account", gcol], kpi["any_account"]
-        )
-        kpi["mobile_money"] = safe_value(
-            gender.loc[gender["Indicator"] == "Mobile Money", gcol], kpi["mobile_money"]
-        )
-        kpi["formal_bank"] = safe_value(
-            gender.loc[gender["Indicator"] == "Formal/Bank", gcol], kpi["formal_bank"]
-        )
-        kpi["gender_gap"] = 0.0
-
-    if quintile_value in QUINTILE_ORDER:
-        row = income[income["Quintile"].astype(str) == quintile_value]
-        if not row.empty:
-            kpi["any_account"] = safe_value(row["Any Account (%)"], kpi["any_account"])
-            kpi["mobile_money"] = safe_value(
-                row["Mobile Money (%)"], kpi["mobile_money"]
-            )
-            kpi["formal_bank"] = safe_value(row["Formal/Bank (%)"], kpi["formal_bank"])
 
     return kpi
 
@@ -501,107 +477,6 @@ def make_kpi(title, value, icon, color, soft_color):
             )
         ),
         className="kpi-card h-100 animate-fade-up",
-    )
-
-
-def _build_gender_buttons(gender_value="all"):
-    """Build gender segmented buttons with active state."""
-    gender_options = [
-        {"label": "All", "value": "all", "icon": "fa-users"},
-        {"label": "Female", "value": "Female", "icon": "fa-venus"},
-        {"label": "Male", "value": "Male", "icon": "fa-mars"},
-    ]
-    buttons = []
-    for opt in gender_options:
-        is_active = gender_value == opt["value"]
-        buttons.append(
-            html.Button(
-                [
-                    html.I(className=f"fas {opt['icon']} me-1"),
-                    opt["label"],
-                ],
-                id={"type": "gender-btn", "index": opt["value"]},
-                className=f"seg-btn {'seg-btn-active' if is_active else ''}",
-                n_clicks=0,
-            )
-        )
-    return buttons
-
-
-def create_global_controls(gender_value="all", quintile_value="all"):
-    return html.Div(
-        [
-            dbc.Row(
-                [
-                    dbc.Col(
-                        [
-                            html.Div("GENDER", className="filter-label"),
-                            html.Div(
-                                _build_gender_buttons(gender_value),
-                                id="gender-btn-group",
-                                className="seg-group",
-                            ),
-                        ],
-                        lg=5,
-                        md=5,
-                        sm=12,
-                    ),
-                    dbc.Col(
-                        [
-                            html.Div("INCOME QUINTILE", className="filter-label"),
-                            dbc.Select(
-                                id="quintile-filter",
-                                options=[
-                                    {"label": "All Quintiles", "value": "all"},
-                                ]
-                                + [{"label": q, "value": q} for q in QUINTILE_ORDER],
-                                value=quintile_value,
-                                className="quintile-select",
-                            ),
-                        ],
-                        lg=4,
-                        md=4,
-                        sm=12,
-                    ),
-                    dbc.Col(
-                        [
-                            html.Div("ACTIONS", className="filter-label"),
-                            html.Div(
-                                [
-                                    dbc.Button(
-                                        [
-                                            html.I(className="fas fa-rotate-left me-1"),
-                                            "Reset",
-                                        ],
-                                        id="reset-filters",
-                                        color="secondary",
-                                        outline=True,
-                                        size="sm",
-                                        className="filter-action-btn me-2",
-                                    ),
-                                    dbc.Button(
-                                        [
-                                            html.I(className="fas fa-download me-1"),
-                                            "Export",
-                                        ],
-                                        id="export-view-btn",
-                                        color="primary",
-                                        size="sm",
-                                        className="filter-action-btn",
-                                    ),
-                                ],
-                                className="d-flex align-items-center filter-actions-wrap",
-                            ),
-                        ],
-                        lg=3,
-                        md=3,
-                        sm=12,
-                    ),
-                ],
-                className="g-3 align-items-end",
-            ),
-        ],
-        className="filter-bar mb-4",
     )
 
 
