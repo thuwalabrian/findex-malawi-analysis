@@ -79,6 +79,14 @@ def load_barrier_demographics():
 def load_policy_priorities():
     """Load policy priority matrix"""
     df = pd.read_csv(TABLES_DIR / "policy_priority_matrix.csv")
+    
+    # Calculate Feasibility score if not present (scale 0-10)
+    # Higher OR Formal = more feasible to address with formal account interventions
+    if "Feasibility" not in df.columns:
+        # Normalize OR Formal to 0-10 scale
+        or_max = df["OR Formal"].max()
+        df["Feasibility"] = (df["OR Formal"] / or_max * 10).clip(0, 10)
+    
     return df
 
 
