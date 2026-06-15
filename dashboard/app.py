@@ -716,7 +716,9 @@ def create_mobile_nav(active_tab="overview"):
                         dbc.NavLink(
                             [
                                 html.I(className=f"fas {item['icon']}"),
-                                html.Span(item["label"], className="ms-2 d-none d-sm-inline"),
+                                html.Span(
+                                    item["label"], className="ms-2 d-none d-sm-inline"
+                                ),
                             ],
                             href=f"/{item['id']}",
                             active=(active_tab == item["id"]),
@@ -912,7 +914,7 @@ def create_overview_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-chart-bar me-2",
+                            html.I(className="fas fa-chart-bar me-2"),
                             "Gender Comparison - Detailed",
                         ]
                     ),
@@ -1054,7 +1056,7 @@ def create_demographics_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-coins me-2",
+                            html.I(className="fas fa-coins me-2"),
                             "Income Gradient Analysis",
                         ]
                     ),
@@ -1086,7 +1088,7 @@ def create_demographics_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-graduation-cap me-2",
+                            html.I(className="fas fa-graduation-cap me-2"),
                             "Education Gradient Analysis",
                         ]
                     ),
@@ -1224,7 +1226,7 @@ def create_barriers_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-chart-bar me-2",
+                            html.I(className="fas fa-chart-bar me-2"),
                             "All Barriers - Ranked by Prevalence",
                         ]
                     ),
@@ -1851,7 +1853,7 @@ def create_policy_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-bullseye me-2",
+                            html.I(className="fas fa-bullseye me-2"),
                             "Policy Priority Matrix - Impact vs Feasibility",
                         ]
                     ),
@@ -2030,7 +2032,7 @@ def create_models_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-chart-bar me-2",
+                            html.I(className="fas fa-chart-bar me-2"),
                             "Model Coefficients - Any Account Ownership",
                         ]
                     ),
@@ -2062,7 +2064,7 @@ def create_models_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I className="fas fa-table me-2",
+                            html.I(className="fas fa-table me-2"),
                             "Detailed Regression Table",
                         ]
                     ),
