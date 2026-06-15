@@ -854,6 +854,10 @@ footer p {
     .page-title {
         font-size: 1.3rem;
     }
+    /* Fix chart margins for tablet */
+    .js-plotly-plot .plotly .main-svg {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -868,6 +872,270 @@ footer p {
     }
     .page-title {
         font-size: 1.15rem;
+    }
+    /* Improve card spacing on mobile */
+    .card {
+        margin-bottom: 0.75rem;
+    }
+    .card-header {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    .card-body {
+        padding: 1rem;
+    }
+    /* Reduce plot margins */
+    .js-plotly-plot .plotly .modebar {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 576px) {
+    /* Hide navbar subtitle completely on very small screens */
+    .navbar .text-subtitle {
+        display: none;
+    }
+    
+    /* Make KPI cards stack properly */
+    .kpi-card {
+        margin-bottom: 0.5rem;
+    }
+    
+    .kpi-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .kpi-value {
+        font-size: 1.3rem;
+    }
+    
+    .kpi-label {
+        font-size: 0.7rem;
+    }
+    
+    /* Adjust page header */
+    .page-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    .page-title {
+        font-size: 1rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    /* Fix chart text sizes */
+    .js-plotly-plot .plotly .xtick text,
+    .js-plotly-plot .plotly .ytick text {
+        font-size: 9px !important;
+    }
+    
+    .js-plotly-plot .plotly .legend text {
+        font-size: 8px !important;
+    }
+    
+    .js-plotly-plot .plotly .gtitle {
+        font-size: 11px !important;
+    }
+    
+    /* Make horizontal bar chart readable */
+    .js-plotly-plot .plotly .yaxis .ytick text {
+        font-size: 8px !important;
+    }
+    
+    /* Improve filter row on mobile */
+    .filter-bar {
+        padding: 0.75rem;
+    }
+    
+    .seg-btn {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .seg-btn i {
+        font-size: 0.65rem;
+    }
+    
+    /* Adjust comparison cards */
+    .comparison-value-number {
+        font-size: 0.9rem;
+    }
+    
+    .comparison-value-label {
+        font-size: 0.65rem;
+    }
+    
+    .comparison-delta {
+        padding: 2px 6px;
+        font-size: 0.65rem;
+    }
+    
+    /* Fix policy cards */
+    .policy-card {
+        padding: 0.75rem;
+    }
+    
+    .policy-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+    
+    .policy-card h6 {
+        font-size: 0.8rem;
+    }
+    
+    /* Improve insight items */
+    .insight-item {
+        padding: 0.6rem;
+    }
+    
+    .insight-content p {
+        font-size: 0.75rem;
+    }
+    
+    .insight-bullet {
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+    }
+    
+    /* Adjust footer */
+    footer p {
+        font-size: 0.65rem;
+        text-align: center;
+    }
+    
+    /* Make tables horizontal scrollable */
+    .dash-table-container {
+        overflow-x: auto;
+    }
+    
+    .dash-spreadsheet-container {
+        min-width: 500px;
+    }
+    
+    /* Fix segment stats grid */
+    .segment-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .segment-stat {
+        padding: 0.5rem;
+    }
+    
+    .segment-stat-value {
+        font-size: 1rem;
+    }
+    
+    /* Improve quick stats banner */
+    .quick-stats-banner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+    
+    .quick-stat {
+        min-width: 100px;
+    }
+    
+    .quick-stat-value {
+        font-size: 1.1rem;
+    }
+    
+    /* Adjust donut charts */
+    .donut-center-value {
+        font-size: 1rem;
+    }
+    
+    /* Improve touch targets */
+    .nav-link,
+    .seg-btn,
+    .filter-action-btn,
+    .export-btn {
+        min-height: 40px;
+    }
+    
+    /* Fix sidebar navigation if shown on mobile */
+    .sidebar-nav .nav-link {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Adjust status badge */
+    .status-badge {
+        display: none;
+    }
+    
+    /* Fix gradient text overflow */
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    
+    /* Adjust brand icon */
+    .navbar .brand-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small devices (375px and below) */
+@media (max-width: 375px) {
+    .main-content-col {
+        padding: 0.5rem;
+    }
+    
+    .kpi-card .card-body {
+        padding: 0.75rem;
+    }
+    
+    .kpi-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+    
+    .kpi-value {
+        font-size: 1.1rem;
+    }
+    
+    .kpi-label {
+        font-size: 0.65rem;
+    }
+    
+    .card-header {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    .insights-panel {
+        padding: 0.75rem;
+    }
+    
+    .insights-icon-wrapper {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    .insights-title {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 0.9rem;
     }
 }
 
