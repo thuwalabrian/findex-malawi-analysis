@@ -697,6 +697,42 @@ def create_sidebar(active_tab="overview"):
     )
 
 
+def create_mobile_nav(active_tab="overview"):
+    """Create a bottom navigation bar for mobile devices"""
+    nav_items = [
+        {"id": "overview", "label": "Overview", "icon": "fa-house"},
+        {"id": "demographics", "label": "Demographics", "icon": "fa-users"},
+        {"id": "barriers", "label": "Barriers", "icon": "fa-triangle-exclamation"},
+        {"id": "policy", "label": "Policy", "icon": "fa-lightbulb"},
+        {"id": "models", "label": "Models", "icon": "fa-square-poll-vertical"},
+        {"id": "guide", "label": "Guide", "icon": "fa-circle-question"},
+    ]
+
+    return html.Div(
+        [
+            dbc.Nav(
+                [
+                    dbc.NavItem(
+                        dbc.NavLink(
+                            [
+                                html.I(className=f"fas {item['icon']}"),
+                                html.Span(item["label"], className="ms-2 d-none d-sm-inline"),
+                            ],
+                            href=f"/{item['id']}",
+                            active=(active_tab == item["id"]),
+                            className="mobile-nav-link",
+                        )
+                    )
+                    for item in nav_items
+                ],
+                pills=True,
+                className="mobile-nav justify-content-around",
+            )
+        ],
+        className="mobile-bottom-nav d-md-none",
+    )
+
+
 def create_footer():
     return html.Footer(
         dbc.Row(
@@ -876,7 +912,7 @@ def create_overview_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-chart-bar me-2"),
+                            html.I className="fas fa-chart-bar me-2",
                             "Gender Comparison - Detailed",
                         ]
                     ),
@@ -1018,7 +1054,7 @@ def create_demographics_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-coins me-2"),
+                            html.I className="fas fa-coins me-2",
                             "Income Gradient Analysis",
                         ]
                     ),
@@ -1050,7 +1086,7 @@ def create_demographics_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-graduation-cap me-2"),
+                            html.I className="fas fa-graduation-cap me-2",
                             "Education Gradient Analysis",
                         ]
                     ),
@@ -1188,7 +1224,7 @@ def create_barriers_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-chart-bar me-2"),
+                            html.I className="fas fa-chart-bar me-2",
                             "All Barriers - Ranked by Prevalence",
                         ]
                     ),
@@ -1815,7 +1851,7 @@ def create_policy_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-bullseye me-2"),
+                            html.I className="fas fa-bullseye me-2",
                             "Policy Priority Matrix - Impact vs Feasibility",
                         ]
                     ),
@@ -1994,7 +2030,7 @@ def create_models_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-chart-bar me-2"),
+                            html.I className="fas fa-chart-bar me-2",
                             "Model Coefficients - Any Account Ownership",
                         ]
                     ),
@@ -2026,7 +2062,7 @@ def create_models_tab():
                 [
                     dbc.CardHeader(
                         [
-                            html.I(className="fas fa-table me-2"),
+                            html.I className="fas fa-table me-2",
                             "Detailed Regression Table",
                         ]
                     ),
@@ -2062,7 +2098,7 @@ def create_models_tab():
                 ],
                 className="chart-card mb-4",
             ),
-        ]
+        ],
     )
 
 
@@ -2118,6 +2154,7 @@ app.layout = html.Div(
             size="lg",
             centered=True,
         ),
+        create_mobile_nav(),
     ]
 )
 
@@ -2292,6 +2329,7 @@ def open_barrier_modal(click_data, close_clicks, is_open):
                     "backgroundColor": "rgba(0,0,0,0)",
                     "color": P["text2"],
                     "fontSize": "0.85rem",
+                    "fontFamily": "'JetBrains Mono', monospace",
                     "border": "1px solid " + P["border"],
                 },
                 style_header={
@@ -2310,6 +2348,15 @@ def open_barrier_modal(click_data, close_clicks, is_open):
         ]
     )
     return True, f"🔍 {barrier_name}", body
+
+
+@app.callback(
+    Output("mobile-nav-container", "children"),
+    Input("active-tab-store", "data"),
+    prevent_initial_call=False,
+)
+def update_mobile_nav(active_tab):
+    return create_mobile_nav(active_tab or "overview")
 
 
 if __name__ == "__main__":
